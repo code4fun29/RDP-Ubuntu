@@ -1,28 +1,6 @@
-# Free Virtual Machine by Github Action
-
-[繁體中文](https://github.com/RealKoolisw/VirtualMachine-GithubAction/blob/main/supports/README-zh.md) [English](#)
-
-:warning: Reminder: If you are facing errors when starting the systems and vps, please fork and pull the newest version of codes of this repo to your forked repo. Press [here](#Updating-Codes) for steps. 
-Totally FREE for everyone to enjoy your own MacOS, Windows 10 and ubuntu vps.
+# RDP Ubuntu 20.04 LTS
 
 ## Screenshots:
-<details>
-    <summary>Windows 10</summary>
-<br>
-    
-- Windows 10 Version
-<img src="https://raw.githubusercontent.com/RealKoolisw/image/main/VirtualMachine-GHAction/sceenshots/268600af-c8b9-47cf-b5dd-d1c1ed6d9ce9.png">
-
-- Windows 10 Task Manager
-<img src="https://raw.githubusercontent.com/RealKoolisw/image/main/VirtualMachine-GHAction/sceenshots/0cf98258-a6fe-46bb-ac9a-ee4bb3037e3a.png" >
-
-- Windows 10 Device Manager
-<img src="https://raw.githubusercontent.com/RealKoolisw/image/main/VirtualMachine-GHAction/sceenshots/d32cf285-5ecf-4cce-a52a-5cb54fb130c7.png">
-
-- Windows 10 Device Specification
-<img src="https://raw.githubusercontent.com/RealKoolisw/image/main/VirtualMachine-GHAction/sceenshots/e1852b80-d550-44f3-b619-86ea82902bb4.png">
-    
-</details>
 
 <details>
     <summary>Ubuntu (SSH Version)</summary>
@@ -62,35 +40,10 @@ type **yes** from the connect, and then type your ssh password by secrets of LIN
 
 </details>
 
-<details>
-    <summary>MacOS</summary>
-<br>
-
-- Desktop Screenshot
-<img src="https://raw.githubusercontent.com/RealKoolisw/image/main/VirtualMachine-GHAction/sceenshots/Screenshot%202021-02-23%20at%207.32.41%20AM.png" >
-
-- Settings
-<img src="https://raw.githubusercontent.com/RealKoolisw/image/main/VirtualMachine-GHAction/sceenshots/Screenshot%202021-02-23%20at%207.32.21%20AM.png" >
-
-- RAM
-<img src="https://raw.githubusercontent.com/RealKoolisw/image/main/VirtualMachine-GHAction/sceenshots/Screenshot%202021-02-23%20at%207.32.58%20AM.png" >
-
-- Storage
-<img src="https://raw.githubusercontent.com/RealKoolisw/image/main/VirtualMachine-GHAction/sceenshots/Screenshot%202021-02-23%20at%207.33.18%20AM.png" >
-
-- Pre-Installed Apps
-<img src="https://raw.githubusercontent.com/RealKoolisw/image/main/VirtualMachine-GHAction/sceenshots/Screenshot%202021-02-23%20at%207.34.10%20AM.png" >
-
-</details>
 
 ## Machine Specification:
-### Windows and Linux:
 - 2-core vCPU
 - 7 GB RAM
-- 14 GB SSD Disk **(Excluded System used)**
-### MacOS 10.15
-- 3-core vCPU
-- 14 GB RAM
 - 14 GB SSD Disk **(Excluded System used)**
 
 ## Setting up:
@@ -99,46 +52,13 @@ type **yes** from the connect, and then type your ssh password by secrets of LIN
 
 Secrets Name | Uses | Notes
 ----- | ----- | -----
-`MAC_REALNAME` | For MacOS User Display Name | Type any name you want
-`MAC_USER_PASSWORD` | For MacOS System Admin Password | Type any password you want
 `NGROK_AUTH_TOKEN` | For **ngrok** tunnel uses | Go to website, and copy the API key from https://dashboard.ngrok.com/auth/your-authtoken
-`VNC_PASSWORD` | For the login password of VNC remote authentication | Type any password you want
-`WINDOWS_USER_PASSWORD` | For Windows 10 RDP login password | Type any password you want
 `LINUX_USERNAME` | For linux system username | Type any name you want
 `LINUX_USER_PASSWORD` | For linux shell and root password | Type any password you want
 `LINUX_MACHINE_NAME` | For Linux System Computer name | Type any name you want
 `CHROME_HEADLESS_CODE` | For remoting linux desktop using google remote | Copy Codes from [here](https://remotedesktop.google.com/headless) and login with your google account, and then copy the code below `Debian Linux` blank. :warning: Each code can only be used for once, generate another code when u have used that one.
 
 ## Deloy and Run
-<details>
-    <summary>MacOS Install and Run</summary>
-<br>
-    
-1. go to `Actions` Tab and select one of system workflow.
-
-2. Click `Run Workflow` button on the left of `This workflow has a workflow_dispatch event trigger` line.
-
-3. Wait until a few minutes.
-
-4. Go to https://dashboard.ngrok.com/status/tunnels and check if theres a one online tunnel running.
-
-5. Copy the link(**without tcp://**) and go to VNC Viewer(Download and install it), input the link to connect area u copied from the website.
-
-6. Fill in those login info, within username `koolisw`and password from `VNC_PASSWORD` you typed.
-
-7. Enjoy!
-
-</details>
-
-<details>
-    <summary>Windows 10</summary>
-<br>
-
-1. First, start the actions of Windows 10 System.
-2. Second, Go to https://dashboard.ngrok.com/status/tunnels and check if theres a one online tunnel running.
-3. Go to Windows Remote Desktop Connection app or Microsoft Remote Desktop software to connect to windows 10 VPS.
-4. ENJOY!
-
 </details>
 
 <details>
@@ -154,13 +74,6 @@ Secrets Name | Uses | Notes
 
 </details>
 
-
-- Reminders:
-:warning: Dont close this windows which called "**provisioner.exe**", it will cause the windows system process to be stopped and disconnect from Windows RDP.
-<img src="https://raw.githubusercontent.com/RealKoolisw/image/main/VirtualMachine-GHAction/sceenshots/9a56f43b-0734-4186-b619-1588c208eb05.png">
-
-:warning: Dont install big sur updates on your macos virtual machine, it will break your remote process!
-<img src="https://raw.githubusercontent.com/RealKoolisw/image/main/VirtualMachine-GHAction/sceenshots/Screenshot%202021-02-23%20at%207.35.57%20AM.png">
 
 ## Updating Codes
 <details>
@@ -186,7 +99,3 @@ Secrets Name | Uses | Notes
 2. Not suggested for you saving some of important and sensitive files to each machine, be risked that all files will be deleted and cannot be undo.
 3. Since we are using **ngrok**, you can only run one of those **three** system by one due to ngrok free plan limits, you cannot access both system at the same time unless you purchased **ngrok** pro or business plan.
 4. Not suggested to login any account from any website (just like **Google or Microsoft**), since **VNC** connection is not encrypted and easily been accessed other people.
-
-## Suggestions and Best Tricks:
-- If you are facing slow and laggy remote control experience from **MacOS** or **Windows**, you can use either **Google Remote Desktop** or **Microsoft Remote Control** for a faster and smoother remotes.
-- We highly recommanded you **fork** this project to change username and other displaying names for systems.
